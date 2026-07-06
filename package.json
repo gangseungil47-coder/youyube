@@ -3,5 +3,3 @@
     "build": "node build-config.mjs"
   }
 }
-*** Add File: public/config.js
-window.DASHBOARD_CONFIG = {"sheetId":""};
