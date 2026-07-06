@@ -42,7 +42,14 @@ http://127.0.0.1:4173/?sheet=구글시트ID
 
 1. GitHub에는 `public/`, `vercel.json`, `README.md`, `.gitignore` 등 공개 가능한 파일만 올립니다.
 2. Vercel에서 GitHub 저장소를 연결합니다.
-3. 배포 후 아래 형식으로 접속합니다.
+3. Vercel 환경변수에 `PUBLIC_GOOGLE_SHEET_ID`를 추가하고 값에 Google Sheet ID를 넣습니다.
+4. 배포 후 아래 형식으로 접속합니다.
+
+```text
+https://배포주소.vercel.app/
+```
+
+URL로 시트 ID를 직접 넘겨서 확인할 수도 있습니다.
 
 ```text
 https://배포주소.vercel.app/?sheet=구글시트ID

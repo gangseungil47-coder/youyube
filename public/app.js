@@ -5,7 +5,8 @@ const state = { ideas: [] };
 
 function sheetId() {
   const params = new URLSearchParams(window.location.search);
-  return (params.get("sheet") || params.get("sheetId") || "").trim();
+  const configId = window.DASHBOARD_CONFIG?.sheetId || "";
+  return (params.get("sheet") || params.get("sheetId") || configId).trim();
 }
 
 function cacheKey(id) {
