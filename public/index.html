@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube 리서치 보기 대시보드</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">VIEW ONLY</p>
+        <h1>YouTube 리서치 대시보드</h1>
+      </div>
+      <div class="status" id="status">공개 시트를 불러오는 중</div>
+    </header>
+
+    <main class="layout">
+      <section class="summary-grid" id="summaryGrid"></section>
+
+      <section class="split">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">TOP VIDEOS</p>
+              <h2>상위 영상 목록</h2>
+            </div>
+            <span class="hint">떡상점수순</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>점수</th>
+                  <th>영상</th>
+                  <th>채널</th>
+                  <th>유형</th>
+                  <th>조회수</th>
+                  <th>댓글</th>
+                  <th>추천 포인트</th>
+                </tr>
+              </thead>
+              <tbody id="videoRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="panel distribution">
+          <p class="eyebrow">DISTRIBUTION</p>
+          <h2>쇼츠/롱폼 분포</h2>
+          <div class="bar">
+            <span id="shortsBar"></span>
+            <span id="longformBar"></span>
+          </div>
+          <div class="legend">
+            <span><i class="dot red"></i>쇼츠 <b id="shortsCount">0</b></span>
+            <span><i class="dot dark"></i>롱폼 <b id="longformCount">0</b></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel ideas-section">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">IDEAS</p>
+            <h2>추천 아이디어 보드</h2>
+          </div>
+          <p class="hint">한 줄 최대 3개, 카드를 누르면 오른쪽에서 상세를 봅니다.</p>
+        </div>
+        <div class="ideas-grid" id="ideasGrid"></div>
+      </section>
+    </main>
+
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <button class="close" id="closeDrawer" aria-label="닫기">x</button>
+      <p class="eyebrow" id="drawerType">IDEA DETAIL</p>
+      <h2 id="drawerTitle">아이디어를 선택해 주세요</h2>
+      <dl id="drawerDetails"></dl>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

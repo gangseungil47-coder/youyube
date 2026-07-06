@@ -1,0 +1,10 @@
+﻿.env
+secrets/
+thumbnails/
+analysis_outputs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+videos.json
+dashboard-history.json
+.vercel/
